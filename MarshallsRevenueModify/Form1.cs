@@ -30,6 +30,15 @@ namespace MarshallsRevenueModify
             IntAmount = Convert.ToInt32(txtInt.Text);
             ExtAmount = Convert.ToInt32(txtExt.Text);
 
+            while (ExtAmount < 0 && ExtAmount > 30 && IntAmount < 0 && IntAmount > 30)
+            {
+                lblMore.Text = "Please enter a valid number of murals between 0 and 30";
+            }
+            while (Month < 1 && Month > 12)
+            {
+                    lblTotal.Text = "Please enter a month between 1 and 12";   
+            }
+
             if (Month == 12 || Month == 1 || Month == 2)
                 ExtAmount = 0;
 
