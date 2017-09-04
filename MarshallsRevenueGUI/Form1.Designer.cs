@@ -35,6 +35,8 @@
             this.txtExt = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblMore = new System.Windows.Forms.Label();
+            this.txtMonth = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCalc
@@ -78,6 +80,7 @@
             this.txtExt.Name = "txtExt";
             this.txtExt.Size = new System.Drawing.Size(100, 20);
             this.txtExt.TabIndex = 2;
+            this.txtExt.TextChanged += new System.EventHandler(this.txtExt_TextChanged);
             // 
             // lblTotal
             // 
@@ -95,20 +98,40 @@
             this.lblMore.Size = new System.Drawing.Size(0, 13);
             this.lblMore.TabIndex = 1;
             // 
+            // txtMonth
+            // 
+            this.txtMonth.Location = new System.Drawing.Point(224, 25);
+            this.txtMonth.Name = "txtMonth";
+            this.txtMonth.Size = new System.Drawing.Size(100, 20);
+            this.txtMonth.TabIndex = 2;
+            this.txtMonth.TextChanged += new System.EventHandler(this.txtExt_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(221, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Month (1-12)";
+            // 
             // marshallsRevenue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 153);
+            this.Controls.Add(this.txtMonth);
             this.Controls.Add(this.txtExt);
             this.Controls.Add(this.txtInt);
             this.Controls.Add(this.lblMore);
             this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCalc);
             this.Name = "marshallsRevenue";
             this.Text = "Marshalls Murals";
+            this.Load += new System.EventHandler(this.marshallsRevenue_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,6 +146,8 @@
         private System.Windows.Forms.TextBox txtExt;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblMore;
+        private System.Windows.Forms.TextBox txtMonth;
+        private System.Windows.Forms.Label label3;
     }
 }
 
