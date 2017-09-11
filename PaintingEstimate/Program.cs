@@ -10,7 +10,6 @@ namespace PaintingEstimate
     {
         static void Main(string[] args)
         {
-            //hey there
             double width = 0;
             double length = 0;
             double price = 0;
