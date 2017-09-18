@@ -4,8 +4,6 @@ namespace ClassAndObjects
 {
     class Student
     {
-        private int idNumber;
-        private string lastName;
         private double gradePointAverage;
 
         public const double HIGHEST_GPA = 4.0;
